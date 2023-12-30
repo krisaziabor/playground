@@ -5,20 +5,28 @@
         <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <!-- Babel Script -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
         <script type="text/jsx">
             const app = document.getElementById("app")
 
-            function Header(){
-                return <h1>Develop. Preivew. Ship.</h1>;
+            function Header({ title }){
+                return <h1>{title ? title : 'Default Title'}</h1>;
             }
             
             function HomePage(){
+
+                const names = ['J Hus', 'Noname', 'Jordan Ward'];
+
                 return (
                     <div>
-                        <Header />
+                        <Header title="Develop. Preview. Ship." />
+                        <ul>
+                            {names.map((name) => (
+                                <li key={name}>{name}</li>
+                            ))}
+                        </ul>
                     </div>
                 );
             }
