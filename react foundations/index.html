@@ -1,23 +1,16 @@
 <html>
     <body>
         <div id="app"></div>
-        <script type="text/javascript">
 
-            // selects div element with 'app' ID
-            const app = document.getElementById('app');
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-            // create a new H1 element
-            const header = document.createElement('h1');
-
-            // creating a new text node for H1 element
-            const text = 'Develop. Preview. Ship.';
-            const headerContent = document.createTextNode(text);
-
-            // append text to H1 element
-            header.appendChild(headerContent);
-
-            // place H1 element inside div
-            app.appendChild(header);
-        </script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Babel Script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const app = document.getElementById("app")
+            ReactDOM.render(<h1>Develop. Preview. Ship.</h1>, app)
+          </script>
     </body>
 </html>
